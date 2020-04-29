@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		046236C02459545F00476EF6 /* CocoaPodsTestLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046236BF2459545F00476EF6 /* CocoaPodsTestLibrary.swift */; };
+		046236C7245954AC00476EF6 /* PrintController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046236C6245954AC00476EF6 /* PrintController.swift */; };
+		E8E8E18FCC7218D5EAB778C8 /* Pods_CocoaPodsTestLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67D61C9296DEBCFDA63DEBD8 /* Pods_CocoaPodsTestLibrary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		01295E3087AB896A9472AA9C /* Pods-CocoaPodsTestLibrary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPodsTestLibrary.release.xcconfig"; path = "Target Support Files/Pods-CocoaPodsTestLibrary/Pods-CocoaPodsTestLibrary.release.xcconfig"; sourceTree = "<group>"; };
 		046236BC2459545F00476EF6 /* libCocoaPodsTestLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaPodsTestLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		046236BF2459545F00476EF6 /* CocoaPodsTestLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocoaPodsTestLibrary.swift; sourceTree = "<group>"; };
+		046236C6245954AC00476EF6 /* PrintController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintController.swift; sourceTree = "<group>"; };
+		67D61C9296DEBCFDA63DEBD8 /* Pods_CocoaPodsTestLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaPodsTestLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8890656E593B6CED6611E74D /* Pods-CocoaPodsTestLibrary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaPodsTestLibrary.debug.xcconfig"; path = "Target Support Files/Pods-CocoaPodsTestLibrary/Pods-CocoaPodsTestLibrary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8E8E18FCC7218D5EAB778C8 /* Pods_CocoaPodsTestLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +50,8 @@
 			children = (
 				046236BE2459545F00476EF6 /* CocoaPodsTestLibrary */,
 				046236BD2459545F00476EF6 /* Products */,
+				27546E6DCF416DA42F045CC3 /* Pods */,
+				ED1E481103B5A7DAEB31F749 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +67,27 @@
 			isa = PBXGroup;
 			children = (
 				046236BF2459545F00476EF6 /* CocoaPodsTestLibrary.swift */,
+				046236C6245954AC00476EF6 /* PrintController.swift */,
 			);
 			path = CocoaPodsTestLibrary;
+			sourceTree = "<group>";
+		};
+		27546E6DCF416DA42F045CC3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8890656E593B6CED6611E74D /* Pods-CocoaPodsTestLibrary.debug.xcconfig */,
+				01295E3087AB896A9472AA9C /* Pods-CocoaPodsTestLibrary.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED1E481103B5A7DAEB31F749 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67D61C9296DEBCFDA63DEBD8 /* Pods_CocoaPodsTestLibrary.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -69,6 +97,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 046236C32459545F00476EF6 /* Build configuration list for PBXNativeTarget "CocoaPodsTestLibrary" */;
 			buildPhases = (
+				89D04371C21234AB385E9EDD /* [CP] Check Pods Manifest.lock */,
 				046236B82459545F00476EF6 /* Sources */,
 				046236B92459545F00476EF6 /* Frameworks */,
 				046236BA2459545F00476EF6 /* CopyFiles */,
@@ -115,12 +144,38 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		89D04371C21234AB385E9EDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CocoaPodsTestLibrary-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		046236B82459545F00476EF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				046236C02459545F00476EF6 /* CocoaPodsTestLibrary.swift in Sources */,
+				046236C7245954AC00476EF6 /* PrintController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +298,7 @@
 		};
 		046236C42459545F00476EF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8890656E593B6CED6611E74D /* Pods-CocoaPodsTestLibrary.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V8CC856AY;
@@ -256,6 +312,7 @@
 		};
 		046236C52459545F00476EF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01295E3087AB896A9472AA9C /* Pods-CocoaPodsTestLibrary.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3V8CC856AY;
